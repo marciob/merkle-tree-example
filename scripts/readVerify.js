@@ -19,7 +19,7 @@ async function main() {
 
   const verify = await contract.verify(merkleProof, claimerAddress);
 
-  console.log("Can claim:", verify);
+  console.log("Verification:", verify);
 }
 
 main()
