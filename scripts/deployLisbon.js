@@ -34,4 +34,7 @@ main()
     process.exit(1);
   });
 
-// Use with: npx hardhat run scripts/deploy.js --network mumbai
+// Use with:
+// npx hardhat run scripts/deploy.js --network mumbai
+// npx hardhat verify --network mumbai <contractAddress> “Lisbon” “LBS”
+// npx hardhat verify --contract contracts/Lisbon.sol:Lisbon --network mumbai 0x9C1046f49413FFAaca13c7d709b3e8e8e7A0D909
