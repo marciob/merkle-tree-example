@@ -15,6 +15,8 @@ contract LisbonAirdrop {
 
     event Claim(address indexed claimer);
 
+    // _token: address of the token to be airdropped
+    // _merkleRoot: merkle root of the merkle tree containing the airdrop qualified addresses
     constructor(address _token, bytes32 _merkleRoot) {
         token = _token;
         merkleRoot = _merkleRoot;

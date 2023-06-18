@@ -1,5 +1,5 @@
-require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config({ path: ".env" });
+require("@nomicfoundation/hardhat-toolbox");
 
 const ALCHEMY_API_KEY_URL = `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY_URL}`;
 
