@@ -7,7 +7,7 @@ async function main() {
   const provider = new ethers.providers.JsonRpcProvider(
     "https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78"
   );
-  const contractAddress = "0x98CbD4728080d4D1B9f172451Bd9461A32f42A86";
+  const contractAddress = "0x9d9146CA86F627dD638FACB009cE4b3276bfb421";
   const claimerAddress = "0x2f0b23f53734252bda2277357e97e1517d6b042f";
   const merkleProof = [
     "0x3f1a3f5e1f3735eb310a9387fe5a27671ab40a7056555657b9fbbfe25ab9e038",
@@ -17,9 +17,9 @@ async function main() {
 
   const contract = new ethers.Contract(contractAddress, contractABI, provider);
 
-  const canClaim = await contract.canClaim(claimerAddress, merkleProof);
+  const verify = await contract.verify(merkleProof, contractAddress);
 
-  console.log("Can claim:", canClaim);
+  console.log("Can claim:", verify);
 }
 
 main()
