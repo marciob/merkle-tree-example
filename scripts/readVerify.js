@@ -17,7 +17,7 @@ async function main() {
 
   const contract = new ethers.Contract(contractAddress, contractABI, provider);
 
-  const verify = await contract.verify(merkleProof, contractAddress);
+  const verify = await contract.verify(merkleProof, claimerAddress);
 
   console.log("Can claim:", verify);
 }
