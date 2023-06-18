@@ -19,7 +19,7 @@ contract Verifier {
         address addr // address to be verified
     ) public view returns (bool) {
         // hash the address
-        bytes32 leaf = keccak256(abi.encodePacked(addr));
+        bytes32 leaf = keccak256(bytes.concat(keccak256(abi.encode(addr))));
 
         // it will return true if the address is within the merkle tree
         return MerkleProof.verify(proof, root, leaf);
