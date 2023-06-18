@@ -13,7 +13,7 @@ contract Verifier {
         root = _root;
     }
 
-    // verify if the address is within the merkle tree
+    // verifies if the address is within the merkle tree
     function verify(
         bytes32[] memory proof, // merkle proof of the address, it's an array of hashes
         address addr // address to be verified

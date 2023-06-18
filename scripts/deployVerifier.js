@@ -1,3 +1,5 @@
+// script for ethers version "ethers": "^6.6.0"
+
 require("dotenv").config({ path: ".env" });
 const hre = require("hardhat");
 require("@nomicfoundation/hardhat-toolbox");

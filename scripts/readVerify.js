@@ -1,3 +1,6 @@
+// this script works only with ethers version "ethers": "5.x.x" or bellow
+// there is an issue with ethers version "ethers": "^6.6.0" and above
+
 const ethers = require("ethers");
 
 const contractABI = require("./AbiLisbonAirdrop.js");
