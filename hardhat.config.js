@@ -1,21 +1,20 @@
-require("dotenv").config({ path: ".env" });
-require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-ethers");
+require("dotenv").config();
 
-const ALCHEMY_API_KEY_URL = `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY_URL}`;
+const ALCHEMY_URL = process.env.ALCHEMY_URL;
 
-const MUMBAI_PRIVATE_KEY = process.env.MUMBAI_PRIVATE_KEY;
-
-const ETHERSCAN_KEY = process.env.ETHERSCAN_KEY;
+// Set your own ALCHEMY_URL in a .env file
 
 module.exports = {
-  solidity: "0.8.9",
+  defaultNetwork: "hardhat",
   networks: {
-    mumbai: {
-      url: ALCHEMY_API_KEY_URL,
-      accounts: [MUMBAI_PRIVATE_KEY],
+    hardhat: {
+      forking: {
+        url: ALCHEMY_URL,
+      },
     },
   },
-  etherscan: {
-    apiKey: ETHERSCAN_KEY,
+  solidity: {
+    version: "0.8.9",
   },
 };
